@@ -3,5 +3,8 @@ from ip_address import Connection
 
 # this is a insert statement in python
 connection = Connection()
-output = connection.session.execute("INSERT INTO crud.users (first_name,last_name,age) VALUES (BOB,BOBERSON,21)")
+output = connection.session.execute(
+    "INSERT INTO crud.users (first_name,last_name,age) VALUES (%s, %s, %s)",
+    ('Bob', 'Boberson', 21)
+)
 print(output)

@@ -1,7 +1,8 @@
 
 function ip_address(){
-    ip_address = '127.0.0.1';
+    connection.ip_address = '127.0.0.1';
+    connection.path_to_creds=''
     return ip_address
 }
 
-export default ip_address;
+export default connection;

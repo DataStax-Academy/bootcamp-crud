@@ -1,8 +1,12 @@
+const dse = require('dse-driver');
 
-function ip_address(){
+function init_connection(){
+    var connection = {}
     connection.ip_address = '127.0.0.1';
     connection.path_to_creds=''
-    return ip_address
+    connection.client = new dse.Client({ contactPoints: [connection.ip_address], localDataCenter: 'Cassandra' });
+    return connection
 }
 
-export default connection;
+
+module.exports = init_connection;

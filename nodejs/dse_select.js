@@ -1,12 +1,10 @@
-const init_connection = require('./ip_address')
+const connection = require('./ip_address')
 
-connection = init_connection()
 // this is a select statement in nodejs
-const query1 = 'SELECT * FROM crud.users WHERE name = BOB';
-connection.client.execute(query1)
+connection.client.execute('SELECT * FROM crud.users')
 .then(result => {
-    result.forEach(row => {
+    result.rows.forEach(row => {
         console.log(row)
     });
 })
-.catch((error) => {console.log(error)});
+.catch(error => console.log(error.message));

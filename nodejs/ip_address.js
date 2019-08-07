@@ -13,5 +13,6 @@ function init_connection(){
 }
 
 connection = init_connection()
+console.log(connection.client.connected)
 
 module.exports = connection;

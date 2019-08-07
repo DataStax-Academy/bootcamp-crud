@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mando222/bootcamp-crud#readme",
   "dependencies": {
+    "cassandra-driver": "^4.1.0",
     "dse-driver": "^2.1.0"
   }
 }

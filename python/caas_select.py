@@ -6,3 +6,4 @@ connection = Connection()
 output = connection.session.execute("SELECT * FROM crud.users")
 for row in output:
     print(row)
+connection.close()

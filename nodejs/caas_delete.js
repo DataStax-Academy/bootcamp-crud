@@ -5,5 +5,11 @@ connection.client.execute(
     'DELETE FROM crud.users WHERE first_name = ?',
     ['Bob']
 )
-.then(console.log('Success'))
-.catch(error => console.log(error.message));
+.then(function (result){
+    console.log('Success')
+    connection.client.shutdown()
+})
+.catch(function (error){
+     console.log(error.message)
+     connection.client.shutdown()
+});

@@ -6,5 +6,11 @@ connection.client.execute(
     ['Bob','Boberson',30], 
     { prepare : true }
 )
-.then(result => console.log(result))
-.catch(error => console.log(error.message));
+.then(function (result){
+    console.log('Success')
+    connection.client.shutdown()
+})
+.catch(function (error){
+     console.log(error.message)
+     connection.client.shutdown()
+});

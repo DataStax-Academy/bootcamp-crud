@@ -8,3 +8,4 @@ output = connection.session.execute(
     (30,'Bob')
 )
 print(output)
+connection.close()

@@ -8,4 +8,3 @@ connection.client.execute(
 )
 .then(console.log('Success'))
 .catch(error => console.log(error.message));
-// process.exit()

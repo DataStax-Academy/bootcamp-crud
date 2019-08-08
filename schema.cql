@@ -1,9 +1,8 @@
-
-CREATE KEYSPACE crud WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'Cassandra'  : 1 };
-
-CREATE TABLE crud.users (
-  first_name text,
-  last_name text,
-  age int,
-  PRIMARY KEY (first_name)
+CREATE TABLE killrvideo.advocates (
+  first_name    TEXT,
+  last_name     TEXT,
+  region        TEXT,
+  city          TEXT,
+  super_power   TEXT,
+  PRIMARY KEY ((region, city), last_name, first_name)
 );

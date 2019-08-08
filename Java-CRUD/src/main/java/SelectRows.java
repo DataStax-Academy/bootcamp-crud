@@ -2,7 +2,7 @@ import com.datastax.dse.driver.api.core.DseSession;
 import com.datastax.oss.driver.api.core.cql.*;
 import java.net.InetSocketAddress;
 
-public class Select {
+public class SelectRows {
     
     public static void main(String args[]) {
         try (DseSession session = DseSession.builder()

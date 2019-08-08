@@ -1,5 +1,5 @@
 #!/usr/bin/env python3      
-from cassandra.cluster import Cluster
+from dse.cluster import Cluster
 
 class Connection:
     def __init__(self):
